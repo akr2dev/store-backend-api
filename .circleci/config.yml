@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  aws-elastic-beanstalk: circleci/aws-elastic-beanstalk@2.0.1
 
 jobs:
   build:
@@ -12,10 +14,14 @@ jobs:
     docker:
       - image: cimg/node:16.15.0
     steps:
-    - checkout
-    - run: npm install
-    - run: npm run build
-    - run: npm run test
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - run: npm run test
+  deploy:
+    executor: aws-eb/default
+      steps:
+          - run: eb deploy Storebackendapi-prod
 
 workflows:
   version: 2
@@ -25,3 +31,6 @@ workflows:
       - test:
           requires:
             - build
+      - deploy:
+        requires:
+          build

@@ -1,9 +1,6 @@
 import {User} from "../models/UsersModel";
 
 describe("User Model", ()=>{
-    beforeEach(() => {
-        jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;  // 10 seconds
-    });
 
     it("index method", ()=>{
         expect(User.index).toBeDefined();
