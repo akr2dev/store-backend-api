@@ -23,6 +23,7 @@ jobs:
        - image: 'cimg/base:stable'
     steps:
       - checkout
+      - eb/setup
       - run: eb deploy Storebackendapi-prod       
 workflows:
   version: 2
