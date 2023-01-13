@@ -19,7 +19,8 @@ jobs:
       - run: npm run build
       - run: npm run test
   deploy:
-    executor: aws-eb/default
+    docker:
+      - image: 'cimg/base:stable'
       steps:
       - run: eb deploy Storebackendapi-prod
 
