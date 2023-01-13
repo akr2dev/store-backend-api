@@ -21,7 +21,7 @@ jobs:
   deploy:
     executor: aws-eb/default
       steps:
-          - run: eb deploy Storebackendapi-prod
+      - run: eb deploy Storebackendapi-prod
 
 workflows:
   version: 2
