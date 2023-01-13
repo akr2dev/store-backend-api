@@ -69,7 +69,7 @@ The following table shows overview of the Rest APIs that will be exported:
 1. Post
 ```json
         {
-        "productName:",
+        "productName":,
         "price":,
         "category":
 		}
@@ -77,7 +77,7 @@ The following table shows overview of the Rest APIs that will be exported:
 2.Put
 ```json
 {
-"price":
+"price":,
 }
 ```
 ### /users
@@ -98,7 +98,7 @@ Kindly refer to /utils and check relevant file for more details.
 ```json
 {
 "first_name":,
-"last_name":.
+"last_name":,
 "email":,
 "password":
 }
@@ -106,15 +106,15 @@ Kindly refer to /utils and check relevant file for more details.
 2. POST /login
 ```json
 {
-"email",
-"password"
+"email": ,
+"password": 
 }
 ```
 3. PUT
 ```json
 {
-"email",
-"password"
+"email": ,
+"password": 
 }
 ```
 ### /orders
@@ -129,8 +129,8 @@ Kindly refer to /utils and check relevant file for more details.
 2. If you logged in successfully you will get header 'x-auth-token'
 3. copy it and add it in your new requests
 ##### password
-admin login details [email: akr2dev@admin.com ,  password: admin123]
-user login details [email: hancock@user.com, password: user123]
+1. admin login details [email: akr2dev@admin.com ,  password: admin123]
+2. user login details [email: hancock@user.com, password: user123]
 
 ### Credits
 - MaharaTech

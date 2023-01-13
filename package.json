@@ -2,11 +2,12 @@
   "name": "backend_store",
   "version": "1.0.0",
   "description": "udacity backend project for storefront",
-  "main": "./src/app.ts",
+  "main": "./build/app.js",
   "scripts": {
-    "start": "node ./src/app.ts",
+    "start": "node ./build/app.js",
     "build": "npx tsc",
-    "test": "jasmine"
+    "test": "jasmine",
+    "deploy": "bash deploy.sh"
   },
   "author": "akr2dev",
   "license": "ISC",
