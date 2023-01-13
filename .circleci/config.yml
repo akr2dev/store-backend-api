@@ -8,9 +8,19 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run build
+  test:
+    docker:
+      - image: cimg/node:16.15.0
+    steps:
+    - checkout
+    - run: npm install
+    - run: npm run test
 
 workflows:
   version: 2
   build-test-deploy:
     jobs:
       - build
+      - test:
+          requires:
+            - build
