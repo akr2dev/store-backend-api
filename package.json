@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./build/app.js",
     "build": "npx tsc",
-    "test": "jasmine",
+    "test": "NODE_ENV=production && jasmine",
     "deploy": "bash deploy.sh"
   },
   "author": "akr2dev",
