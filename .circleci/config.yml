@@ -24,10 +24,8 @@ jobs:
     steps:
       - checkout
       - eb/setup
-      - run:
-          command: |
-            eb init
-            eb deploy Storebackendapi-prod
+      - run: eb init
+      - run: eb deploy Storebackendapi-prod          
 workflows:
   version: 2
   build-test-deploy:
