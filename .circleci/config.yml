@@ -21,9 +21,12 @@ jobs:
   deploy:
     docker:
        - image: 'cimg/base:stable'
+       - image: cimg/node:16.15.0
     steps:
       - checkout
       - eb/setup
+      - run: npm install
+      - run: npm run build
       - run: eb deploy
 workflows:
   version: 2
