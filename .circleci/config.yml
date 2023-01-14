@@ -20,7 +20,7 @@ jobs:
       - run: npm run test
   deploy:
     docker:
-       - image: 'cimg/base:stable'
+       - image: cimg/base:stable
        - image: cimg/node:16.15.0
     steps:
       - checkout
